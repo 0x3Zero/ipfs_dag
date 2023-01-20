@@ -1,0 +1,17 @@
+{
+  "fdb": {
+    "modules": [
+      {
+        "name": "ipfs_dag",
+        "path": "artifacts/ipfs_dag.wasm",
+        "logger_enabled": true,
+        "mounted_binaries": [
+          ["ipfs", "/usr/bin/ipfs"],
+          ["bash", "/usr/bin/bash"]
+        ],
+        "mem_page_count": 100,
+        "envs": [["/tmp/vault", "./tmp"]]
+      }
+    ]
+  }
+}
