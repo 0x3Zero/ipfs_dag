@@ -1,5 +1,5 @@
 {
-  "fdb": {
+  "ipfs_dag": {
     "modules": [
       {
         "name": "ipfs_dag",
