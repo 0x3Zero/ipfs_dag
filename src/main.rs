@@ -6,7 +6,7 @@ use marine_rs_sdk::marine;
 use marine_rs_sdk::module_manifest;
 use marine_rs_sdk::MountedBinaryResult;
 use marine_rs_sdk::WasmLoggerBuilder;
-use result::IpfsDagResult;
+use result::{IpfsDagGetResult, IpfsDagPutResult};
 
 use eyre::Result;
 
@@ -48,7 +48,7 @@ fn get_timeout_string(timeout: u64) -> String {
 }
 
 #[marine]
-pub fn put(object: String, api_multiaddr: String, timeout_sec: u64) -> IpfsDagResult {
+pub fn put(object: String, api_multiaddr: String, timeout_sec: u64) -> IpfsDagPutResult {
     let address: String;
     let t;
 
@@ -80,7 +80,7 @@ pub fn put(object: String, api_multiaddr: String, timeout_sec: u64) -> IpfsDagRe
 }
 
 #[marine]
-pub fn get(hash: String, api_multiaddr: String, timeout_sec: u64) -> IpfsDagResult {
+pub fn get(hash: String, api_multiaddr: String, timeout_sec: u64) -> IpfsDagGetResult {
     let address: String;
     let t;
 
