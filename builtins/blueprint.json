@@ -1,0 +1,6 @@
+{
+  "name": "ipfs_dag",
+  "dependencies": [
+    "name:ipfs_dag"
+  ]
+}
