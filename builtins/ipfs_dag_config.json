@@ -1,0 +1,13 @@
+{
+"name": "ipfs_dag",
+"mounted_binaries":
+{
+  "ipfs": "/usr/bin/ipfs",
+  "bash": "/usr/bin/bash"
+},
+"envs": {
+  "/tmp/vault": "./tmp"
+},
+"max_heap_size": "100 KiB",
+"logger_enabled": true
+}

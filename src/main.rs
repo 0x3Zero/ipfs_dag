@@ -68,9 +68,10 @@ pub fn put(object: String, api_multiaddr: String, timeout_sec: u64) -> IpfsDagPu
     log::info!("{:?}", input);
     // let input = String::from("echo '".to_owned() + &data + "' | ipfs dag put");
 
-    let args = vec![String::from("-c"), input];
+    let args = make_cmd_args(vec![input], address, t);
 
-    let cmd = make_cmd_args(args, address, t);
+    let cmd = vec![String::from("-c"), args.join(" ")];
+
 
     log::info!("ipfs put args : {:?}", cmd);
 
