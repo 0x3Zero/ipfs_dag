@@ -9,7 +9,7 @@
           ["ipfs", "/usr/bin/ipfs"],
           ["bash", "/usr/bin/bash"]
         ],
-        "mem_page_count": 100,
+        "max_heap_size": "100 KiB",
         "envs": [["/tmp/vault", "./tmp"]]
       }
     ]

@@ -11,6 +11,8 @@ marine build --release
 mkdir -p artifacts
 rm -f artifacts/*.wasm
 cp target/wasm32-wasi/release/ipfs_dag.wasm artifacts/
-marine aqua artifacts/ipfs_dag.wasm -s ipfs_dag -i IpfsDag > ./aqua/ipfs_dag.aqua
+marine aqua artifacts/ipfs_dag.wasm -s ipfs_dag -i ipfs_dag > ./aqua/ipfs_dag.aqua
+
+cp -f artifacts/*.wasm builtins/
 
 RUST_LOG="info" mrepl --quiet Config.toml
